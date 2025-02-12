@@ -15,8 +15,8 @@ from django.utils import timezone
 from django.utils.safestring import mark_safe
 from rolepermissions.decorators import has_permission_decorator
 
-from reNgine.common_func import *
-from reNgine.tasks import run_command, sanitize_url
+from HunterCat.common_func import *
+from HunterCat.tasks import run_command, sanitize_url
 from scanEngine.models import *
 from startScan.models import *
 from targetApp.forms import *

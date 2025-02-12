@@ -5,8 +5,8 @@ env = environ.FileAwareEnv()
 import mimetypes
 import os
 
-from reNgine.init import first_run
-from reNgine.utilities import RengineTaskFormatter
+from HunterCat.init import first_run
+from HunterCat.utilities import RengineTaskFormatter
 
 mimetypes.add_type("text/javascript", ".js", True)
 mimetypes.add_type("text/css", ".css", True)

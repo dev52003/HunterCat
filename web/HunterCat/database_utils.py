@@ -9,8 +9,8 @@ from django.utils import timezone
 from dashboard.models import Project
 from targetApp.models import Organization, Domain
 from startScan.models import EndPoint, IpAddress
-from reNgine.settings import LOGGING
-from reNgine.common_func import *
+from HunterCat.settings import LOGGING
+from HunterCat.common_func import *
 
 logger = logging.getLogger(__name__)
 

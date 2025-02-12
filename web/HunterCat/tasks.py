@@ -24,13 +24,13 @@ from django.shortcuts import get_object_or_404
 from pycvesearch import CVESearch
 from metafinder.extractor import extract_metadata_from_google_search
 
-from reNgine.celery import app
-from reNgine.celery_custom_task import RengineTask
-from reNgine.common_func import *
-from reNgine.definitions import *
-from reNgine.settings import *
-from reNgine.llm import *
-from reNgine.utilities import *
+from HunterCat.celery import app
+from HunterCat.celery_custom_task import RengineTask
+from HunterCat.common_func import *
+from HunterCat.definitions import *
+from HunterCat.settings import *
+from HunterCat.llm import *
+from HunterCat.utilities import *
 from scanEngine.models import (EngineType, InstalledExternalTool, Notification, Proxy)
 from startScan.models import *
 from startScan.models import EndPoint, Subdomain, Vulnerability

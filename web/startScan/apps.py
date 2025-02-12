@@ -1,5 +1,5 @@
 from django.apps import AppConfig
-from reNgine.definitions import logger
+from HunterCat.definitions import logger
 
 
 class StartscanConfig(AppConfig):

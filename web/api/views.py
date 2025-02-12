@@ -21,13 +21,13 @@ from django.core.cache import cache
 
 from dashboard.models import *
 from recon_note.models import *
-from reNgine.celery import app
-from reNgine.common_func import *
-from reNgine.database_utils import *
-from reNgine.definitions import ABORTED_TASK
-from reNgine.tasks import *
-from reNgine.llm import *
-from reNgine.utilities import is_safe_path
+from HunterCat.celery import app
+from HunterCat.common_func import *
+from HunterCat.database_utils import *
+from HunterCat.definitions import ABORTED_TASK
+from HunterCat.tasks import *
+from HunterCat.llm import *
+from HunterCat.utilities import is_safe_path
 from scanEngine.models import *
 from startScan.models import *
 from startScan.models import EndPoint
@@ -1231,7 +1231,7 @@ class ListInterestingKeywords(APIView):
 		return Response(keywords)
 
 
-class RengineUpdateCheck(APIView):
+class HuntercatUpdateCheck(APIView):
 	def get(self, request):
 		req = self.request
 		github_api = \
