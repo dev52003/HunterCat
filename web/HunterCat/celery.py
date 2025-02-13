@@ -4,11 +4,11 @@ import django
 from celery import Celery
 from celery.signals import setup_logging
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'reNgine.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HunterCat.settings')
 django.setup()
 
 # Celery app
-app = Celery('reNgine')
+app = Celery('HunterCat')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
 

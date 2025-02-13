@@ -1235,7 +1235,7 @@ class HuntercatUpdateCheck(APIView):
 	def get(self, request):
 		req = self.request
 		github_api = \
-			'https://api.github.com/repos/yogeshojha/rengine/releases'
+			'https://transasiatec.com/'  #https://github.com/yogeshojha/rengine/releases
 		response = requests.get(github_api).json()
 		if 'message' in response:
 			return Response({'status': False, 'message': 'RateLimited'})
@@ -1244,7 +1244,7 @@ class HuntercatUpdateCheck(APIView):
 
 		# get current version_number
 		# remove quotes from current_version
-		current_version = RENGINE_CURRENT_VERSION
+		current_version = HUNTERCAT_CURRENT_VERSION
 
 		# for consistency remove v from both if exists
 		latest_version = re.search(r'v(\d+\.)?(\d+\.)?(\*|\d+)',
@@ -1269,12 +1269,12 @@ class HuntercatUpdateCheck(APIView):
 
 		# if is_version_update_available then we should create inapp notification
 		create_inappnotification(
-			title='reNgine Update Available',
+			title='HunterCat Update Available',
 			description=f'Update to version {latest_version} is available',
 			notification_type=SYSTEM_LEVEL_NOTIFICATION,
 			project_slug=None,
 			icon='mdi-update',
-			redirect_link='https://github.com/yogeshojha/rengine/releases',
+			redirect_link='https://transasiatec.com/', #https://github.com/yogeshojha/rengine/releases
 			open_in_new_tab=True
 		)
 
