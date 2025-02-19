@@ -129,11 +129,11 @@ services:
       - redis
     secrets:
       - source: proxy.ca
-        target: /etc/nginx/certs/HunterCat_chain.pem
+        target: /etc/nginx/certs/huntercat_chain.pem
       - source: proxy.cert
-        target: /etc/nginx/certs/HunterCat.pem
+        target: /etc/nginx/certs/huntercat.pem
       - source: proxy.key
-        target: /etc/nginx/certs/HunterCat_rsa.key
+        target: /etc/nginx/certs/huntercat_rsa.key
     volumes:
       - ./config/nginx/HunterCat.conf:/etc/nginx/conf.d/HunterCat.conf:ro
       - static_volume:/usr/src/app/staticfiles/
@@ -146,7 +146,7 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     ports:
-      - "11434:11434"
+      - "11431:11431"
     networks:
       - HunterCat_network
 
@@ -166,8 +166,8 @@ volumes:
 
 secrets:
   proxy.ca:
-    file: ./secrets/certs/HunterCat_chain.pem
+    file: ./secrets/certs/huntercat_chain.pem
   proxy.key:
-    file: ./secrets/certs/HunterCat_rsa.key
+    file: ./secrets/certs/huntercat_rsa.key
   proxy.cert:
-    file: ./secrets/certs/HunterCat.pem
+    file: ./secrets/certs/huntercat.pem
